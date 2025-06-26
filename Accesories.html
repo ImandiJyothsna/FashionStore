@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+          padding-top: 100px;
+            margin:0;
+            border:0;
+        }
+        *{
+            margin:0;
+            border:0;
+
+        }
+        .header{
+            height: 100px;
+            width:100%;
+        
+            
+        
+        }
+        .header h1{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-weight: bolder;
+        
+            
+        }
+        .accessories-1{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 30px;
+        }
+        .card-body{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .accessories-2{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+        }
+        .card-img-top:hover {
+            transform: scale(1.1);
+         }
+         .accessories-3{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .row {
+            display: flex;
+            justify-content: flex-end; 
+        }
+        .card-img-top {
+            height: 200px;  
+            object-fit: cover;
+          }
+          .accessories-4{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+          }
+          .accessories-5{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+          }
+
+          nav {
+        
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+         
+        padding: 0 20px;
+        }
+    .nav-links {
+        display: flex;
+     
+        flex-grow: 1; 
+        align-items: center;
+        
+    }
+    .nav-link {
+        color: black;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-style: italic;
+        font-size: large;
+        justify-content: space-around;
+        
+    }
+    .nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+    .btn{
+      justify-content: right;
+    }
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" style="height: 100px; z-index: 1000;">
+
+            <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px;">
+              
+              
+              <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/21/e9/2b/21e92b919fcff144c0c04fcc66cf5580.jpg" alt="Logo" style="height: 100px;">
+              </a>
+          
+              
+              <div class="d-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html#Categories">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+          
+              
+              <a href="cart.html" class="btn btn-warning position-relative">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+</a>
+
+          
+            </div>
+          </nav>
+            
+    <div class="header">
+   </div>
+   
+<div id="cart" class="container">
+    
+</div>
+
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-end" style="margin-top: -100px;">
+      <div class="col-md-1">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <button id="filterButton" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </div>
+   <div class="accessories-1" id="shirtsContainer">
+
+        <div class="card" style="width: 18rem;" data-price="900">
+            <a href="DA1.html"><img src="https://img.freepik.com/free-photo/close-up-male-hand-pocket-with-modern-elegant-wristwatch_1262-16910.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Sonata Titan Men Leather Analog Watch, Band Color-Brown</h5>
+              <p class="card-text">₹900</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1100">
+           <a href="DA2.html"> <img src="https://img.freepik.com/free-photo/watch-black-box-bow-tie-lie-white-windowsill_8353-687.jpg?t=st=1739712104~exp=1739715704~hmac=2f85b15817cb73b7f3bf1a53d43e5bbd459a60cb98dd0f172f40ee4a48749d3e&w=996" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">TIMEWEAR Analog New Track Number Dial Genuine Leather Strap Watch for Men</h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1300">
+           <a href="DA3.html"> <img src="https://img.freepik.com/free-photo/gray-scale-shot-black-watch_181624-422.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Casio Youth Series Analog White Dial Men's Watch</h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="accessories-2">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DA4.html"> <img src="https://img.freepik.com/free-photo/silver-aesthetic-wallpaper-with-chain_23-2149871722.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Multi Ring Stainless Steel Pendant  Necklace for Men and Boys</h5>
+              <p class="card-text">₹1700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DA5.html"><img src="https://img.freepik.com/free-psd/silver-chain-bracelet-strong-links-jewelry-fashion-accessory_84443-44815.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Stylish Silver Plated Stainless Steel Chain Style Silver Bracelet For Men  8.5 Inches</h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="DA6.html"> <img src="https://img.freepik.com/free-photo/jewelry-lifestyle-flat-layout-with-place-text-jewellery-background-mockup-banner-fashion-accessories_460848-12590.jpg?t=st=1739716664~exp=1739720264~hmac=c208317859e9f0782dff262cce8f3e3b6f6dccbe720e5e62c841082a69ee567a&w=996" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Multi Ring Stainless Steel Pendant Locket Necklace </h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="accessories-3">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DA7.html"> <img src="https://img.freepik.com/free-photo/closeup-diamond-ring_53876-17957.jpg?t=st=1739716956~exp=1739720556~hmac=dd37fbcb992bedeb5ff68c82efdc34a4bc0f80bf04b071961a5df1f0b582c96f&w=900" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Three-stone ring mens with white metal band</h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DA8.HTML"><img src="https://img.freepik.com/free-photo/jeweler-work-jewelry_155003-12006.jpg?t=st=1739717104~exp=1739720704~hmac=aaaa70c40902337f1f3a2471fa396cad3b77fe87ff24f6a171d48cca06165cf3&w=996" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Blood Pressure Control Copper Ring for Mens </h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DA9.html"><img src="https://img.freepik.com/free-photo/close-up-man-taking-wedding-ring-off-finger_23-2148548618.jpg?t=st=1739717214~exp=1739720814~hmac=57c92fc8aefc7c41c1c262f67a1b254f2a61719adec76c924dacb370d388c5fd&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Copper Metal Ring for Men</h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="accessories-4">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DA10.html"><img src="https://img.freepik.com/free-photo/portrait-charming-young-man_171337-17440.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Men's UV Protection Acetate Square Sunglasses</h5>
+              <p class="card-text">₹1200</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DA11.html"><img src="https://img.freepik.com/free-photo/young-man-blue-shirt-hat-touching-his-glasses-looking-cheerful-front-view_176474-92162.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Blue Polarized Sunglasses for Men </h5>
+              <p class="card-text">₹1400</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DA12.html"><img src="https://img.freepik.com/premium-photo/stylish-handsome-handsome-young-man-formalwear-sunglasses-looking-away-while-standing-against-metal-background_425904-34385.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Rectangular Sunglasses For Men</h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="accessories-5">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DA13.html"> <img src="https://img.freepik.com/free-photo/fashion-portrait-young-businessman-handsome-model-man-dressed-elegant-brown-suit-with-accessories_158538-11178.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Mens brown leather belt with lock buckle</h5>
+              <p class="card-text">₹700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DA14.html"><img src="https://img.freepik.com/premium-photo/man-wearing-shirt-that-says-it_975681-47374.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Brown leather Embelished Broad Belt</h5>
+              <p class="card-text">₹500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DA15.html"><img src="https://img.freepik.com/free-photo/bridegrooom-tie-belt_627829-11857.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+
+            
+            <div class="card-body">
+              <h5 class="card-title"> Men Knight Belt PU Leather</h5>
+              <p class="card-text">₹800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        document.getElementById("filterButton").addEventListener("click", function() {
+          var minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+          var maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+          
+          var shirts = document.querySelectorAll(".card");
+          shirts.forEach(function(shirt) {
+            var shirtPrice = parseInt(shirt.getAttribute("data-price"));
+            if (shirtPrice >= minPrice && shirtPrice <= maxPrice) {
+              shirt.style.display = "block";
+            } else {
+              shirt.style.display = "none";
+            }
+          });
+        });
+      </script>
+      
+      <script>
+ const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  document.querySelectorAll('.card').forEach(card => {
+    const title = card.querySelector('.card-title').innerText.trim();
+    const addButton = card.querySelector('.addToCartBtn');
+
+    const exists = cart.some(item => item.title === title);
+
+    if (exists) {
+      addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+    }
+
+    addButton.addEventListener('click', function () {
+      const price = Number(card.getAttribute('data-price'));
+      const image = card.querySelector('.card-img-top').src;
+
+      const product = { title, price, image, quantity: 1 };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingIndex = cart.findIndex(item => item.title === title);
+
+      if (existingIndex !== -1) {
+        alert(`${title} is already in the cart!`);
+      } else {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+        alert(`${title} added to cart!`);
+      }
+    });
+  });
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const countSpan = document.getElementById('cartCount');
+
+  if (countSpan) {
+    if (count > 0) {
+      countSpan.textContent = count;
+      countSpan.style.display = 'inline-block';
+    } else {
+      countSpan.style.display = 'none';
+    }
+  }
+}
+ updateCartCount();
+
+</script>
+
+      </body>
+      </html>
+      

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+          padding-top: 100px;
+            margin:0;
+            border:0;
+        }
+        *{
+            margin:0;
+            border:0;
+
+        }
+        .header{
+            height: 100px;
+            width:100%;
+        
+            
+        
+        }
+        .header h1{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-weight: bolder;
+        
+            
+        }
+        .Sarees-1{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 30px;
+        }
+        .card-body{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .Sareess-2{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+        }
+        .card-img-top:hover {
+            transform: scale(1.1);
+         }
+         .Sareess-3{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .row {
+            display: flex;
+            justify-content: flex-end; 
+        }
+        .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+         }
+         .Sareess-4{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .Sareess-5{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+
+       .nav {
+        
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+         
+        padding: 0 20px;
+        }
+    .nav-links {
+        display: flex;
+     
+        flex-grow: 1; 
+        align-items: center;
+        
+    }
+    .nav-link {
+        color: black;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-style: italic;
+        font-size: large;
+        justify-content: space-around;
+        
+    }
+    .nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+    .btn{
+      justify-content: right;
+    }
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" style="height: 100px; z-index: 1000;">
+            <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px;">
+              
+                            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/21/e9/2b/21e92b919fcff144c0c04fcc66cf5580.jpg" alt="Logo" style="height: 100px;">
+              </a>
+          
+                            <div class="d-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html#Categories">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+          
+        <a href="cart.html" class="btn btn-warning position-relative">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+</a>
+          
+            </div>
+          </nav>
+            
+    <div class="header">
+   </div>
+   <div id="cart" class="container">
+    </div>
+<div class="container-fluid mt-3">
+    <div class="row justify-content-end" style="margin-top: -100px;">
+      <div class="col-md-1">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <button id="filterButton" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </div>
+   <div class="Sarees-1" id="shirtsContainer">
+
+        <div class="card" style="width: 18rem;" data-price="900">
+            <a href="DS1.html"><img src="https://img.freepik.com/free-photo/young-indian-woman-wearing-sari_23-2149400843.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Embroidered Silk Blend Saree in Light Blue</h5>
+              <p class="card-text">₹900</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1100">
+            <a href="DS2.html"><img src="https://img.freepik.com/free-photo/studio-portrait-young-woman-wearing-traditional-sari-garment_23-2149565125.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Teal Indian Chinon Chiffon Sequin Border Saree for Women</h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1300">
+            <a href="DS3.html"><img src="https://img.freepik.com/free-photo/front-view-smiley-woman-talking-phone_23-2149461697.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Pure Soft Geeorgette Saree with Heavy Foil Print and Jecard lace Border</h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="Sareess-2">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DS4.html"><img src="https://img.freepik.com/free-photo/portrait-young-woman-wearing-tradition-sari-garment_52683-90230.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Jaipur Kurthi Printed Bandhani Georgette Red Saree</h5>
+              <p class="card-text">₹1700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DS5.html"><img src="https://img.freepik.com/free-photo/portrait-beautiful-woman-wearing-traditional-sari-garment_23-2149565120.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women's Georgette Sequins Semi Crepe  Work Saree</h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DS6.html"><img src="https://img.freepik.com/free-photo/portrait-beautiful-indian-brumette-girl-hindu-woman-model-against-japanese-traditional-house-dragon-figure_627829-7671.jpg?t=st=1739717770~exp=1739721370~hmac=624b0802026d7948c749158102fa5c021fa16efbc589bbad0048b514153f5ad3&w=996" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Womens Embelished,Embroidered Georgette Saree in Blue colour</h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Sareess-3">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DS7.html"><img src="https://img.freepik.com/free-photo/medium-shot-smiley-women-walking-together_23-2149461711.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women's Banarasi Soft Silk Saree Pure Kanjivaram Style Saree  For Wedding</h5>
+              <p class="card-text">₹1700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DS8.html"><img src="https://img.freepik.com/free-photo/celebration-navratri-deity_23-2151219980.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> red colour gold Embroidery saree for women </h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DS9.html"><img src="https://img.freepik.com/free-photo/young-indian-woman-wear-elegant-black-saree-posed-restaurant-against-wall-with-frames_627829-798.jpg?t=st=1739718165~exp=1739721765~hmac=b88bad0997d89e90ce15062211810f6a519162d8aa0db4ef13beeb2cdbd1a43e&w=996" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women's Designer Patch Border Net Saree In Black</h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Sareess-4">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DS10.html"><img src="https://assets.ajio.com/medias/sys_master/root/20250206/59dW/67a4d3e1bc78b543a929666c/-473Wx593H-701172146-mauve-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women's Banarasi Soft Silk Saree Pure Kanjivaram Style Saree  For Wedding</h5>
+              <p class="card-text">₹1750</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DS11.html"><img src="https://img.freepik.com/premium-photo/indian-traditional-beautiful-young-girl-saree-posing-outdoors-park_136354-15103.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Hand Painted Banaras Cotton Silk Saree </h5>
+              <p class="card-text">₹1400</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DS12.html"><img src="https://img.freepik.com/premium-photo/woman-sari-with-pink-gold-is-posing-photo_204996-970.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Self Design Kanjavaram Art Silk ,Pure Silk Saree</h5>
+              <p class="card-text">₹1900</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Sareess-5">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DS13.html"><img src="https://img.freepik.com/free-photo/portrait-young-woman-wearing-tradition-sari-garment_52683-90226.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Banaras Silk Blend Green Saree</h5>
+              <p class="card-text">₹700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+           <a href="DS14.html"> <img src="https://img.freepik.com/free-photo/beautiful-young-woman-wearing-sari_23-2149503000.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> red  and black coloured  gold Embroidery saree for women </h5>
+              <p class="card-text">₹800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DS15.html"><img src="https://img.freepik.com/free-photo/indian-hindu-girl-traditional-violet-saree-posed-street-against-purple-windows_627829-2022.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Embroidered Bollywood Georgette Saree</h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        document.getElementById("filterButton").addEventListener("click", function() {
+          var minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+          var maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+          
+          var shirts = document.querySelectorAll(".card");
+          shirts.forEach(function(shirt) {
+            var shirtPrice = parseInt(shirt.getAttribute("data-price"));
+            if (shirtPrice >= minPrice && shirtPrice <= maxPrice) {
+              shirt.style.display = "block";
+            } else {
+              shirt.style.display = "none";
+            }
+          });
+        });
+      </script>
+      
+      <script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  document.querySelectorAll('.card').forEach(card => {
+    const title = card.querySelector('.card-title').innerText.trim();
+    const addButton = card.querySelector('.addToCartBtn');
+
+    const exists = cart.some(item => item.title === title);
+
+    if (exists) {
+      addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+    }
+
+    addButton.addEventListener('click', function () {
+      const price = Number(card.getAttribute('data-price'));
+      const image = card.querySelector('.card-img-top').src;
+
+      const product = { title, price, image, quantity: 1 };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingIndex = cart.findIndex(item => item.title === title);
+
+      if (existingIndex !== -1) {
+        alert(`${title} is already in the cart!`);
+      } else {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+        alert(`${title} added to cart!`);
+      }
+    });
+  });
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const countSpan = document.getElementById('cartCount');
+
+  if (countSpan) {
+    if (count > 0) {
+      countSpan.textContent = count;
+      countSpan.style.display = 'inline-block';
+    } else {
+      countSpan.style.display = 'none';
+    }
+  }
+}
+ updateCartCount();
+</script>
+
+      </body>
+      </html>
+      

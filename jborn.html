@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+          padding-top: 100px;
+            margin:0;
+            border:0;
+        }
+        *{
+            margin:0;
+            border:0;
+
+        }
+        .header{
+            height: 100px;
+            width:100%;
+          }
+        .header h1{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-weight: bolder;
+        
+            
+        }
+        .Jborn-1{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 30px;
+        }
+        .card-body{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .Jborn-2{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+        }
+        .card-img-top:hover {
+            transform: scale(1.1);
+         }
+         .Jborn-3{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .row {
+            display: flex;
+            justify-content: flex-end; 
+        }
+        .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+         }
+         .Jborn-4{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .Jborn-5{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+
+        .nav {
+        
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+         
+        padding: 0 20px;
+        }
+    .nav-links {
+        display: flex;
+     
+        flex-grow: 1; 
+        align-items: center;
+        
+    }
+    .nav-link {
+        color: black;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-style: italic;
+        font-size: large;
+        justify-content: space-around;
+        
+    }
+    .nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+    .btn{
+      justify-content: right;
+    }
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" style="height: 100px; z-index: 1000;">
+            <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px;">
+              
+                            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/21/e9/2b/21e92b919fcff144c0c04fcc66cf5580.jpg" alt="Logo" style="height: 100px;">
+              </a>
+          
+                            <div class="d-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html#Categories">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+          
+        <a href="cart.html" class="btn btn-warning position-relative">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+</a>
+          
+            </div>
+          </nav>
+            
+    <div class="header">
+   </div>
+   <div id="cart" class="container">
+    </div>
+   
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-end" style="margin-top: -100px;">
+      <div class="col-md-1">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <button id="filterButton" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </div>
+   <div class="Jborn-1" id="shirtsContainer">
+
+        <div class="card" style="width: 18rem;" data-price="900">
+            <a href="JB1.html"><img src="https://img.freepik.com/premium-photo/baby-clothes-fabric-background_392895-165946.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Baby Girls Regular fit clothing set</h5>
+              <p class="card-text">₹1900</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1100">
+            <a href="JB2.html"><img src="https://img.freepik.com/premium-photo/children-s-clothes-laundry-line-against-wooden-background_101741-53.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Little Boy Girl Sweet Long Sleeve Peter Pan Collar Knit Sweater Romper Outfit </h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1300">
+           <a href="JB3.html"><img src="https://img.freepik.com/free-photo/white-costume-hanger_23-2147698725.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Just born Long Warm Winter Sweaters </h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="Jborn-2">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="JB4.html"><img src="https://img.freepik.com/free-photo/lovely-family-forest_1328-712.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">5 Pcs Clothing set For New Born Babies</h5>
+              <p class="card-text">₹1700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+           <a href="JB5.html"> <img src="https://img.freepik.com/premium-photo/children-s-clothing-photo-ultrasound_765864-332.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Crew neck long sleeve casual printed  pure cotton outfit </h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="JB6.html"> <img src="https://img.freepik.com/premium-photo/baby-clothes-booties-soother-wooden-background-kit-newborns_491799-784.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Organic Cotton Quilted Jumpsuit for Winter</h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Jborn-3">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="JB7.html"><img src="https://img.freepik.com/free-photo/baby-s-dress-brush-pacifier-toy-pair-socks-with-milk-bottle-wooden-table_23-2147900744.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Baby girls casual self design pure cotton</h5>
+              <p class="card-text">₹1600</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="JB8.html"><img src="https://img.freepik.com/free-photo/baby-boy-concept_23-2147665742.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Little Hub new born baby unisex comfy soft casual outfit</h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="JB9.html"><img src="https://img.freepik.com/free-photo/children-s-wear_93675-130784.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Baby boys and baby girls casual wear summer outfit</h5>
+              <p class="card-text">₹800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Jborn-4">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="JB10.html"><img src="https://img.freepik.com/premium-photo/little-hand-made-baby-clothes-newborn-clothes-unity-protection-happiness_176445-1564.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Infant Boys Tuxedo-Style Bodysuit</h5>
+              <p class="card-text">₹1200</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="JB11.html"><img src="https://img.freepik.com/premium-photo/toy-hare-tied-from-woolen-threads-dark-background-manual-work-hobby_73989-20212.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Infants self design Dungarees set</h5>
+              <p class="card-text">₹1400</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="JB12.html"><img src="https://img.freepik.com/premium-photo/festive-composition-with-baby-girl-accessories-white_222237-239.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Dungaree for Baby Boys and Baby Girls Casual wear,Embroidered Cotton Blend</h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Jborn-5">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="JB13.html"><img src="https://img.freepik.com/premium-photo/girls-baby-bodysuit-mockup-pink-crochet-baby-dress-hat-shoes-white-diy-handmade-craft_1048944-3299220.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Elegant Pink crochet woolen baby girl outfit with a cotton white bodysuite</h5>
+              <p class="card-text">₹700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="JB14.html"><img src="https://img.freepik.com/free-photo/dummy-cloth-children_23-2147698769.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Baby girls casual printed summer outfit</h5>
+              <p class="card-text">₹500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="JB15.html"><img src="https://img.freepik.com/premium-photo/baby-boy-clothes_93675-31469.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Sky Blue and Navy Boys Full Sleeves Cotton Bodysuit </h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        document.getElementById("filterButton").addEventListener("click", function() {
+          var minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+          var maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+          
+          var shirts = document.querySelectorAll(".card");
+          shirts.forEach(function(shirt) {
+            var shirtPrice = parseInt(shirt.getAttribute("data-price"));
+            if (shirtPrice >= minPrice && shirtPrice <= maxPrice) {
+              shirt.style.display = "block";
+            } else {
+              shirt.style.display = "none";
+            }
+          });
+        });
+      </script>
+      
+      <script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  document.querySelectorAll('.card').forEach(card => {
+    const title = card.querySelector('.card-title').innerText.trim();
+    const addButton = card.querySelector('.addToCartBtn');
+
+    const exists = cart.some(item => item.title === title);
+
+    if (exists) {
+      addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+    }
+
+    addButton.addEventListener('click', function () {
+      const price = Number(card.getAttribute('data-price'));
+      const image = card.querySelector('.card-img-top').src;
+
+      const product = { title, price, image, quantity: 1 };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingIndex = cart.findIndex(item => item.title === title);
+
+      if (existingIndex !== -1) {
+        alert(`${title} is already in the cart!`);
+      } else {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+        alert(`${title} added to cart!`);
+      }
+    });
+  });
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const countSpan = document.getElementById('cartCount');
+
+  if (countSpan) {
+    if (count > 0) {
+      countSpan.textContent = count;
+      countSpan.style.display = 'inline-block';
+    } else {
+      countSpan.style.display = 'none';
+    }
+  }
+}
+ updateCartCount();
+</script>
+
+      </body>
+      </html>
+      

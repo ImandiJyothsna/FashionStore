@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+          padding-top: 100px;
+            margin:0;
+            border:0;
+        }
+        *{
+            margin:0;
+            border:0;
+
+        }
+        .header{
+            height: 100px;
+            width:100%;
+        }
+       
+        
+        .shirts-1{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            
+        }
+        .card-body{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .shirts-2{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            
+            
+        }
+         .card-img-top:hover {
+            transform: scale(1.1);
+         }
+         .shirts-3{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            
+         }
+         .row {
+            display: flex;
+            justify-content: flex-end; 
+         }
+
+         .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+}
+      .shirts-4{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+}
+        .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+}
+.shirts-5{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+}
+        .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+}
+.nav {
+        
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+         
+        padding: 0 20px;
+        }
+    .nav-links {
+        display: flex;
+     
+        flex-grow: 1; 
+        align-items: center;
+        
+    }
+    .nav-link {
+        color: black;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-style: italic;
+        font-size: large;
+        justify-content: space-around;
+        
+    }
+    .nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+    .btn{
+      justify-content: right;
+    }
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" style="height: 100px; z-index: 1000;">
+            <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px;">
+              
+                            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/21/e9/2b/21e92b919fcff144c0c04fcc66cf5580.jpg" alt="Logo" style="height: 100px;">
+              </a>
+          
+                            <div class="d-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html#Categories">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+          
+        <a href="cart.html" class="btn btn-warning position-relative">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+</a>
+          
+            </div>
+          </nav>
+            
+    <div class="header">
+   </div>
+   <div id="cart" class="container">
+    </div>
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-end" style="margin-top: -100px;">
+      <div class="col-md-1">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <button id="filterButton" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </div>
+  
+  
+ 
+
+   <div class="shirts-1" id="shirtsContainer" >
+    <div class="card" style="width: 18rem;" data-price="900">
+        <a href="Descriptionshirt1.html"><img src="https://img.freepik.com/free-photo/vertical-shot-concentrated-businessman-listening-carefully-with-crossed-hands_181624-29443.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men's Solid Cotton Formal Shirt | Plain | Full Sleeve-Regular Fit</h5>
+          <p class="card-text">₹900</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1000">
+        <a href="Descriptionshirt2.html"><img src="https://img.freepik.com/premium-photo/man-wearing-black-shirt-portrait_133748-6680.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men's Regular Fit Poly Popcorn Casual Shirt</h5>
+          <p class="card-text">₹1000</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1300">
+        <a href="Descriptionshirt3.html"><img src="https://img.freepik.com/free-photo/basic-white-shirt-men-s-fashion-apparel-city-view-shoot_53876-105525.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men's Pure Linen Solid Casual Shirt (Regular Fit)</h5>
+          <p class="card-text">₹1300</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+   </div>
+   <div class="shirts-2 ">
+    <div class="card" style="width: 18rem;" data-price="1500">
+        <a href="Descriptionshirt4.html"><img src="https://img.freepik.com/free-photo/portrait-young-man-looking-time-watch_23-2147860937.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Miraan Men's Casual Denim Cotton Shirt (SIGDENIMM)</h5>
+          <p class="card-text">₹1500</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1600">
+        <a href="Descriptionshirt5.html"><img src="https://img.freepik.com/free-photo/elegant-young-handsome-man_1301-5868.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title"> Men Full Sleeves  Regular Fit  Office Wear Plaid Checkered Shirt Office and Casual Wear</h5>
+          <p class="card-text">₹1600</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt6.html"><img src="https://img.freepik.com/free-photo/young-entrepreneur-wearing-shirt-trousers_651396-3032.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men's Regular Fit Foraml 100% Cotton Dot Shirt</h5>
+          <p class="card-text">₹1900</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    </div>
+    <div class="shirts-3">
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt7.html"><img src="https://img.freepik.com/premium-photo/portrait-young-stylish-man-green-shirt-white-background-full-height-smiling-picture_953460-288.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Regular Fit Printed Spread Collar Casual Shirt</h5>
+          <p class="card-text">₹1200</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt8.html"><img src="https://img.freepik.com/premium-photo/style-everyday-mens-casual-shirt-photoshoot-poses-boys-shirt_463958-87.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men's Cotton wear Casual Printed shirts</h5>
+          <p class="card-text">₹1100</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt9.html"><img src="https://img.freepik.com/premium-photo/portrait-man-casual-style-posing_484921-11380.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Slim Fit Checkered Slim Collar Casual Shirt</h5>
+          <p class="card-text">₹1000</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+
+        </div>
+    </div>
+   </div>
+   <div class="shirts-4">
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt10.html"><img src="https://assets.ajio.com/medias/sys_master/root/20240309/UloD/65ec495505ac7d77bba40ebd/-473Wx593H-460698941-beige-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Regular Fit Printed Spread Collar Casual Shirt</h5>
+          <p class="card-text">₹1700</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt11.html"><img src="https://assets.ajio.com/medias/sys_master/root/20241126/n4QF/6745e25d0f47f80c87ad3975/-473Wx593H-700810029-aqua-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Shirt with Band Collar</h5>
+          <p class="card-text">₹900</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt12.html"><img src="https://assets.ajio.com/medias/sys_master/root/20230512/nLEs/645e55f842f9e729d77cb386/-473Wx593H-469477464-white-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Logo Embroidered Slim Fit Shirt</h5>
+          <p class="card-text">₹500</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+
+        </div>
+    </div>
+   </div>
+   <div class="shirts-5">
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt13.html"><img src="https://assets.ajio.com/medias/sys_master/root/20230601/cyg8/6478b10bd55b7d0c6330d8c4/-473Wx593H-460453610-white-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Striped Slim Fit Shirt with Patch Pocket</h5>
+          <p class="card-text">₹1650</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt14.html"><img src="https://assets.ajio.com/medias/sys_master/root/20240507/mdc0/663a557116fd2c6e6af0ef6f/-473Wx593H-467293008-brown-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Men Ribbed Regular Fit Shirt</h5>
+          <p class="card-text">₹850</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;" data-price="1900">
+        <a href="Descriptionshirt15.html"><img src="https://assets.ajio.com/medias/sys_master/root/20231215/vMYl/657c5558ddf7791519d2a546/-473Wx593H-466889184-white-MODEL.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Triad Oversized Fit Shirt with Flap Pockets</h5>
+          <p class="card-text">₹1000</p>
+          <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+
+
+        </div>
+    </div>
+   </div>
+   
+   <script>
+    document.getElementById("filterButton").addEventListener("click", function () {
+    var minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+    var maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+
+    
+    var allCards = document.querySelectorAll(".card");
+
+    allCards.forEach(function (card) {
+        var price = parseInt(card.getAttribute("data-price"));
+
+        if (price >= minPrice && price <= maxPrice) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+  </script>
+  
+
+    
+  <script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  document.querySelectorAll('.card').forEach(card => {
+    const title = card.querySelector('.card-title').innerText.trim();
+    const addButton = card.querySelector('.addToCartBtn');
+
+    const exists = cart.some(item => item.title === title);
+
+    if (exists) {
+     addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+    }
+
+    addButton.addEventListener('click', function () {
+      const price = Number(card.getAttribute('data-price'));
+      const image = card.querySelector('.card-img-top').src;
+
+      const product = { title, price, image, quantity: 1 };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingIndex = cart.findIndex(item => item.title === title);
+
+      if (existingIndex !== -1) {
+        alert(`${title} is already in the cart!`);
+      } else {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+        alert(`${title} added to cart!`);
+      }
+    });
+  });
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const countSpan = document.getElementById('cartCount');
+
+  if (countSpan) {
+    if (count > 0) {
+      countSpan.textContent = count;
+      countSpan.style.display = 'inline-block';
+    } else {
+      countSpan.style.display = 'none';
+    }
+  }
+}
+ updateCartCount();
+
+
+
+  </script>
+  </body>
+  </html>
+  

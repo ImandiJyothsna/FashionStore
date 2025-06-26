@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+          padding-top: 100px;
+            margin:0;
+            border:0;
+        }
+        *{
+            margin:0;
+            border:0;
+
+        }
+        .header{
+            height: 100px;
+            width:100%;
+        
+            
+        
+        }
+        .header h1{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-weight: bolder;
+        
+            
+        }
+        .Kurtha-1{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 30px;
+        }
+        .card-body{
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .Kurtha-2{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+        }
+        .card-img-top:hover {
+            transform: scale(1.1);
+         }
+         .Kurtha-3{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .row {
+            display: flex;
+            justify-content: flex-end; 
+        }
+        .card-img-top {
+            height: 400px;  
+            object-fit: cover;
+        }
+        .Kurtha-4{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+         .Kurtha-5{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 100px;
+         }
+
+    .nav {
+        
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+         
+        padding: 0 20px;
+        }
+    .nav-links {
+        display: flex;
+     
+        flex-grow: 1; 
+        align-items: center;
+        
+    }
+    .nav-link {
+        color: black;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        font-style: italic;
+        font-size: large;
+        justify-content: space-around;
+        
+    }
+    .nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+    .btn{
+      justify-content: right;
+    }
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" style="height: 100px; z-index: 1000;">
+            <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100px;">
+              
+                            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/21/e9/2b/21e92b919fcff144c0c04fcc66cf5580.jpg" alt="Logo" style="height: 100px;">
+              </a>
+          
+                            <div class="d-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="index.html#Categories">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black fw-bold fst-italic" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+          
+          <a href="cart.html" class="btn btn-warning position-relative">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+</a>
+          
+            </div>
+          </nav>
+            
+    <div class="header">
+   </div>
+   <div id="cart" class="container">
+    </div>
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-end" style="margin-top: -100px;">
+      <div class="col-md-1">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price (₹)" />
+      </div>
+      <div class="col-md-1">
+        <button id="filterButton" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </div>
+   <div class="Kurtha-1" id="shirtsContainer">
+
+        <div class="card" style="width: 18rem;" data-price="900">
+           <a href="DK1.html"> <img src="https://assets.ajio.com/medias/sys_master/root/20241216/2T1A/67601faec148fa1b303f4453/-473Wx593H-443066785-magntafusha-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Geometric Print Cotton Straight Kurti</h5>
+              <p class="card-text">₹1900</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1100">
+            <a href="DK2.html"><img src="https://assets.ajio.com/medias/sys_master/root/20241215/12wl/675e8882c148fa1b303aaaf0/-473Wx593H-700929397-yellow-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Floral Print Straight Kurti </h5>
+              <p class="card-text">₹1100</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1300">
+            <a href="DK3.html"><img src="https://assets.ajio.com/medias/sys_master/root/20250102/knkS/67765cf00f47f80c872fffa9/-473Wx593H-443067761-beige-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Floral Print Straight Kurti</h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="Kurtha-2">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DK4.html"><img src="https://assets.ajio.com/medias/sys_master/root/20250123/qLTf/679199530431850e0db8721e/-473Wx593H-701087324-green-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Embroidered Straight Kurti</h5>
+              <p class="card-text">₹1700</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+           <a href="DK5.html"> <img src="https://assets.ajio.com/medias/sys_master/root/20250402/kH6p/67ed200355340d4b4fa7d4e5/-473Wx593H-443067438-pink-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Leaf Print Straight Kurti</h5>
+              <p class="card-text">₹1500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="DK6.html"><img src="https://assets.ajio.com/medias/sys_master/root/20250319/2ltb/67daae4b2960820c49fb2ecb/-473Wx593H-442428491-mustard-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Striped Straight Kurthi </h5>
+              <p class="card-text">₹1800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Kurtha-3">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DK7.html"> <img src="https://assets.ajio.com/medias/sys_master/root/20241003/IFtd/66fe71fcf9b8ef490b8f2299/-473Wx593H-700205873-maroon-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Printed Rayon Calf-Length Straight Shirt-Collar Kurthi</h5>
+              <p class="card-text">₹1600</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+           <a href="DK8.html"><img src="https://assets.ajio.com/medias/sys_master/root/20250110/ExLk/6780e0560431850e0d910b09/-473Wx593H-701037421-peach-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Women Yoke Embroidered Flared Kurthi </h5>
+              <p class="card-text">₹500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="DK9.html"> <img src="https://assets.ajio.com/medias/sys_master/root/20250320/jUwC/67dc1a6f55340d4b4f7cc4ef/-473Wx593H-701360099-offwhite-MODEL.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Women Embroidered Anarkali Kurthi</h5>
+              <p class="card-text">₹800</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="Kurtha-4">
+        <div class="card" style="width: 18rem;" data-price="1700">
+            <a href="DK10.html"><img src="https://img.freepik.com/free-photo/young-attractive-indian-woman-traditional-dress-woman-dancing-against-white-background_1157-48166.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Premium Cotton Kurthi Set For women with pant</h5>
+              <p class="card-text">₹750</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+            <a href="DK11.html"><img src="https://img.freepik.com/free-photo/front-view-beautiful-women-bare-feet_23-2148261264.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Printed Georgette Stitched Anarkali Gown </h5>
+              <p class="card-text">₹500</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+            <a href="DK12.html"><img src="https://img.freepik.com/premium-photo/two-sister-beautiful-clothers_1186134-4.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Georgette Fabric with embroidery work kurthi set</h5>
+              <p class="card-text">₹1200</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="Kurtha-5">
+        <div class="card" style="width: 18rem;" data-price="1700">
+           <a href="DK13.html"> <img src="https://img.freepik.com/premium-photo/woman-yellow-saree-with-red-background_866911-26.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">women embroidered  kurthi set with dupatta</h5>
+              <p class="card-text">₹1400</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1500">
+           <a href="DK14.html"><img src="https://img.freepik.com/premium-photo/full-body-asian-woman-ornamental-dress-posing-with-happy-self-confident-smiling-against-white-background_102814-3107.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title"> Elegant Printed Rayon Cloth Long Kurthi set </h5>
+              <p class="card-text">₹1600</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" data-price="1800">
+           <a href="DK15.html"> <img src="https://img.freepik.com/free-photo/pretty-indian-girl-black-saree-dress-posed-restaurant_627829-2050.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Black Embroidered Anarakali Gown </h5>
+              <p class="card-text">₹1300</p>
+              <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
+            </div>
+        </div>
+        </div>
+        <script>
+            document.getElementById("filterButton").addEventListener("click", function() {
+              var minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+              var maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+              
+              var shirts = document.querySelectorAll(".card");
+              shirts.forEach(function(shirt) {
+                var shirtPrice = parseInt(shirt.getAttribute("data-price"));
+                if (shirtPrice >= minPrice && shirtPrice <= maxPrice) {
+                  shirt.style.display = "block";
+                } else {
+                  shirt.style.display = "none";
+                }
+              });
+            });
+          </script>
+          
+          <script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  document.querySelectorAll('.card').forEach(card => {
+    const title = card.querySelector('.card-title').innerText.trim();
+    const addButton = card.querySelector('.addToCartBtn');
+
+    const exists = cart.some(item => item.title === title);
+
+    if (exists) {
+      addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+    }
+
+    addButton.addEventListener('click', function () {
+      const price = Number(card.getAttribute('data-price'));
+      const image = card.querySelector('.card-img-top').src;
+
+      const product = { title, price, image, quantity: 1 };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingIndex = cart.findIndex(item => item.title === title);
+
+      if (existingIndex !== -1) {
+        alert(`${title} is already in the cart!`);
+      } else {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
+        alert(`${title} added to cart!`);
+      }
+    });
+  });
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const countSpan = document.getElementById('cartCount');
+
+  if (countSpan) {
+    if (count > 0) {
+      countSpan.textContent = count;
+      countSpan.style.display = 'inline-block';
+    } else {
+      countSpan.style.display = 'none';
+    }
+  }
+}
+ updateCartCount();
+</script>
+
+          </body>
+          </html>
+          
