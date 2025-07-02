@@ -189,7 +189,7 @@
         <div class="card" style="width: 18rem;" data-price="1700">
            <a href="DG4.html"><img src="https://img.freepik.com/free-photo/children-sport_23-2148108598.jpg?ga=GA1.1.1515908761.1739689345&semt=ais_hybrid&w=740" class="card-img-top" alt="..."></a>
             <div class="card-body">
-              <h5 class="card-title">Slin fir blue jeans with a casual pink TShirt</h5>
+              <h5 class="card-title">Slim fit blue jeans with a casual pink TShirt</h5>
               <p class="card-text">₹1700</p>
               <button type="button" class="btn btn-warning addToCartBtn">Add to cart</button>
             </div>
@@ -320,10 +320,10 @@
     const exists = cart.some(item => item.title === title);
 
     if (exists) {
-      addButton.innerText = "Added to the cart";
-      addButton.disabled = true;
-      addButton.classList.remove("btn-warning");
-      addButton.classList.add("btn-secondary");
+      addButton.innerText = "✓ Added to the cart";
+  addButton.disabled = true;
+  addButton.classList.remove("btn-warning");
+  addButton.classList.add("btn-success");
     }
 
     addButton.addEventListener('click', function () {
