@@ -249,6 +249,16 @@ img {
   }
 }
  updateCartCount();
+     window.addEventListener("pageshow", function () {
+    updateCartCount();
+  });
+
+  // 👇 If changed in another tab
+  window.addEventListener("storage", function (e) {
+    if (e.key === "cart") {
+      updateCartCount();
+    }
+  });
 
 </script>
 
