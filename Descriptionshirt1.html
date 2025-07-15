@@ -186,61 +186,8 @@ img {
   </div>
 </div>
 
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const addButton = document.getElementById('addToCartBtn');
+ <script src="common.js"></script>
 
-    const title = document.querySelector('h4').innerText.trim();
-    const price = Number(document.querySelector('h5').innerText.replace(/[^\d]/g, ''));
-    const image = document.getElementById('productImage').src;
-
-    const product = { title, price, image, quantity: 1 };
-
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    const exists = cart.some(item => item.title === title);
-
-    if (exists) {
-      addButton.innerText = "✓ Added to the cart";
-  addButton.disabled = true;
-  addButton.classList.remove("btn-warning");
-  addButton.classList.add("btn-success");
-    }
-
-    addButton.addEventListener('click', () => {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const existingIndex = cart.findIndex(item => item.title === title);
-
-      if (existingIndex !== -1) {
-        alert(`${title} is already in the cart!`);
-      } else {
-        cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartCount();
-         addButton.innerText = "✓ Added to the cart";
-  addButton.disabled = true;
-  addButton.classList.remove("btn-warning");
-  addButton.classList.add("btn-success");
-        alert(`${title} added to cart!`);
-      }
-    });
-  });
-  function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-  const countSpan = document.getElementById('cartCount');
-
-  if (countSpan) {
-    if (count > 0) {
-      countSpan.textContent = count;
-      countSpan.style.display = 'inline-block';
-    } else {
-      countSpan.style.display = 'none';
-    }
-  }
-}
- updateCartCount();
-</script>
 
 
 </body>
