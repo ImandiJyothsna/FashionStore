@@ -321,7 +321,89 @@
 });
 
   </script>
-   <script src="common.js"></script>
+  
+
+    
+  <script>
+  // ✅ Update cart badge in navbar
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const countSpan = document.getElementById('cartCount');
+
+    if (countSpan) {
+      if (count > 0) {
+        countSpan.textContent = count;
+        countSpan.style.display = 'inline-block';
+      } else {
+        countSpan.style.display = 'none';
+      }
+    }
+  }
+
+  // ✅ Disable add-to-cart buttons if product already in cart
+  function updateCartButtons() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    document.querySelectorAll('.card').forEach(card => {
+      const title = card.querySelector('.card-title').innerText.trim();
+      const addButton = card.querySelector('.addToCartBtn');
+
+      const exists = cart.some(item => item.title === title);
+
+      if (exists) {
+        addButton.innerText = "✓ Added to the cart";
+        addButton.disabled = true;
+        addButton.classList.remove("btn-warning");
+        addButton.classList.add("btn-success");
+      } else {
+        addButton.innerText = "Add to cart";
+        addButton.disabled = false;
+        addButton.classList.remove("btn-success");
+        addButton.classList.add("btn-warning");
+      }
+    });
+  }
+
+  // ✅ Add event listener to each add-to-cart button
+  function setupAddToCartButtons() {
+    document.querySelectorAll('.card').forEach(card => {
+      const title = card.querySelector('.card-title').innerText.trim();
+      const addButton = card.querySelector('.addToCartBtn');
+
+      addButton.addEventListener('click', function () {
+        const price = Number(card.getAttribute('data-price'));
+        const image = card.querySelector('.card-img-top').src;
+
+        const product = { title, price, image, quantity: 1 };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const exists = cart.some(item => item.title === title);
+
+        if (!exists) {
+          cart.push(product);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          updateCartButtons();
+          alert(`${title} added to cart!`);
+        } else {
+          alert(`${title} is already in the cart!`);
+        }
+      });
+    });
+  }
+
+  // ✅ Load everything on page load and back navigation
+  function initCartUI() {
+    updateCartCount();
+    updateCartButtons();
+    setupAddToCartButtons();
+  }
+
+  document.addEventListener('DOMContentLoaded', initCartUI);
+  window.addEventListener('pageshow', initCartUI); // 💡 Fix for back from description page
+</script>
+
   </body>
   </html>
   

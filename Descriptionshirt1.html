@@ -179,22 +179,90 @@ img {
         <li><strong>Easy Maintenance</strong> – Machine-washable, resists fading.</li>
       </ul>
       <h5 class="mb-3">Price: ₹900</h5>
-      <button
-          type="button"
-          class="btn btn-warning px-4 py-2 addToCartBtn"
-          data-title="Men's Solid Cotton Formal Shirt"
-          data-price="900"
-          data-image="https://img.freepik.com/free-photo/vertical-shot-concentrated-businessman-listening-carefully-with-crossed-hands_181624-29443.jpg?uid=R185477835&ga=GA1.1.466116162.1736251737&semt=ais_hybrid"
-        >
-          Add to Cart
-        </button>
+      <button type="button" id="addToCartBtn" class="btn btn-warning px-4 py-2">Add to Cart</button>
 
     </div>
 
   </div>
 </div>
 
- <script src="common.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addButton = document.getElementById('addToCartBtn');
+    const title = document.querySelector('h4').innerText.trim();
+    const price = Number(document.querySelector('h5').innerText.replace(/[^\d]/g, ''));
+    const image = document.getElementById('productImage').src;
+
+    const product = { title, price, image, quantity: 1 };
+
+    function updateButtonState() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const exists = cart.some(item => item.title === title);
+
+      if (exists) {
+        addButton.innerText = "✓ Added to the cart";
+        addButton.disabled = true;
+        addButton.classList.remove("btn-warning");
+        addButton.classList.add("btn-success");
+      } else {
+        addButton.innerText = "Add to Cart";
+        addButton.disabled = false;
+        addButton.classList.remove("btn-success");
+        addButton.classList.add("btn-warning");
+      }
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      const countSpan = document.getElementById('cartCount');
+
+      if (countSpan) {
+        if (count > 0) {
+          countSpan.textContent = count;
+          countSpan.style.display = 'inline-block';
+        } else {
+          countSpan.style.display = 'none';
+        }
+      }
+    }
+
+    addButton.addEventListener('click', () => {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const exists = cart.some(item => item.title === title);
+
+      if (!exists) {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        updateButtonState();
+        alert(`${title} added to cart!`);
+      } else {
+        alert(`${title} is already in the cart!`);
+      }
+    });
+
+    // Initial UI update
+    updateCartCount();
+    updateButtonState();
+  });
+
+  // Also handle browser back/forward navigation sync
+  window.addEventListener('pageshow', () => {
+    const title = document.querySelector('h4').innerText.trim();
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const exists = cart.some(item => item.title === title);
+
+    const addButton = document.getElementById('addToCartBtn');
+    if (exists) {
+      addButton.innerText = "✓ Added to the cart";
+      addButton.disabled = true;
+      addButton.classList.remove("btn-warning");
+      addButton.classList.add("btn-success");
+    }
+    updateCartCount();
+  });
+</script>
 
 
 
